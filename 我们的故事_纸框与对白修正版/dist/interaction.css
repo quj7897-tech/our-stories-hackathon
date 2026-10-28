@@ -1,0 +1,55 @@
+/* 只扩展交互控件；原舞台、美术、字体、气泡和动画继续来自 style.css。 */
+[hidden] { display: none !important; }
+.route-status { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; color: var(--ink2); font-size: 12px; line-height: 1.55; }
+#routeCount { color: var(--accent); }
+#boxStatus { font-size: 11px; }
+.choices { overflow: hidden; }
+.choices .chcard { max-height: 100%; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #cbc0ad #f7f1e4; }
+.choice-status { font-size: 11px; color: var(--accent2); letter-spacing: 1px; margin-bottom: 8px; line-height: 1.5; }
+#chq { outline: none; }
+#chq:focus-visible { outline: 2px solid var(--accent2); outline-offset: 5px; }
+.ch-inspect { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+.ch-inspect:empty { display: none; }
+.ch-inspect button { font-family: var(--font); padding: 5px 10px; line-height: 1.6; border: 1px solid #cbc0ad; border-radius: 10px 12px 9px 11px; color: var(--ink2); background: #f7f1e4; cursor: pointer; font-size: 11px; }
+.ch-inspect button:hover { border-color: var(--accent2); color: var(--accent2); }
+.ch-inspect button.seen { background: #edf2ed; border-color: #a9bba9; }
+.ch-inspect-text { padding: 9px 12px; margin-top: 8px; border-left: 3px solid var(--accent2); border-radius: 0 8px 8px 0; background: #f1f3ef; color: var(--ink2); font-size: 12px; line-height: 1.8; }
+.ch-inspect-text p { margin: 0; }
+.chop:disabled { opacity: .5; cursor: default; }
+.chop:disabled:hover { transform: none; background: #fffdf6; border-color: #cbc0ad; }
+.chop.selected, .chop[aria-pressed="true"] { border-color: var(--accent); background: #fff2e8; }
+.draft-panel { margin-top: 15px; padding: 12px 14px; border-radius: 11px 13px 10px 12px; background: #f7f1e4; border: 1px solid #d9cdbb; }
+.draft-label { font-size: 11px; color: var(--ink2); letter-spacing: 1px; }
+.draft-text { font-size: 13px; color: var(--ink); line-height: 1.85; white-space: pre-wrap; overflow-wrap: anywhere; margin-top: 8px; }
+#commitChoice, #outcomeContinue { margin-top: 12px; padding: 10px 23px; font-size: 13px; letter-spacing: 1px; }
+#outcomeContinue { float: right; }
+.chcard::after { content: ""; display: table; clear: both; }
+.chfb p { margin: 0 0 8px; }
+.chfb p:last-child { margin-bottom: 0; }
+button:focus-visible { outline: 2px solid var(--accent2); outline-offset: 3px; }
+.ctrl button:disabled { opacity: .45; cursor: default; }
+.chapters .cp:disabled { cursor: default; }
+.rv-card { max-height: 92vh; display: flex; flex-direction: column; }
+.rv-h { flex-shrink: 0; }
+.rv-body { overflow: auto; overscroll-behavior: contain; }
+.rv-btns { flex-wrap: wrap; }
+#endingFacts > *, #endingUnseen > * { font-size: 13px; line-height: 1.85; color: var(--ink2); }
+#endingFacts p, #endingUnseen p { margin: 0; }
+#endingReflection { margin-top: 0; }
+@media (max-width: 720px) {
+  .top { flex-wrap: wrap; gap: 9px; }
+  .hud { margin-left: auto; }
+  .brand .sub { font-size: 10px; letter-spacing: 0; }
+  .route-status { font-size: 11px; flex-direction: row; align-items: center; gap: 12px; }
+  .choices { padding: 12px; }
+  .choices .chcard { padding: 15px 16px; }
+  .chq { font-size: 15px; }
+  .chopt { margin-top: 11px; gap: 8px; }
+  .chop { padding: 9px 12px; font-size: 13px; }
+  .chop span { font-size: 11px; }
+  .choice-status { font-size: 10px; }
+  .rv-h { padding: 14px 17px; }
+  .rv-body { padding: 16px 17px 20px; }
+  .rv-btns { gap: 8px; }
+  .rv-btns .bigbtn { padding: 10px 16px; font-size: 12px; letter-spacing: 1px; }
+}

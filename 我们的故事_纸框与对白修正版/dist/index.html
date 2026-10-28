@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf1f3">
+  <meta name="description" content="把回忆写成故事，在彼此的视角里重新相遇。">
+  <title>我们的故事 · 从这里开始</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' rx='16' fill='%23f5dce3'/%3E%3Ctext x='13' y='43' font-size='38' fill='%23ad4663'%3E%E2%99%A1%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gentle.css">
+  <link rel="stylesheet" href="portal-tweaks.css">
+  <script src="story-model.js" defer></script>
+  <script src="portal-catalog.js" defer></script>
+  <script src="portal.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#stories">跳到已有故事</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="我们的故事首页"><span><strong>我们的故事<span aria-hidden="true">♡</span></strong><small>EVERY LITTLE STORY OF US</small></span></a>
+      <nav class="main-nav" aria-label="主导航">
+        <a class="nav-link active" href="#home" data-nav="home">首页</a>
+        <a class="nav-link" href="#my-stories" data-nav="my-stories">我的故事</a>
+        <a class="nav-link" href="#love-shop" data-nav="love-shop">爱心商城</a>
+      </nav>
+      <p class="header-note">每一个我们，<br><span>都有值得珍藏的故事。</span></p>
+      <button class="search-toggle" aria-label="搜索故事" aria-expanded="false" aria-controls="archive-search"><svg aria-hidden="true"><use href="#i-search"/></svg></button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="展开菜单"><span></span><span></span></button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="手机导航" hidden><a href="#home">首页</a><a href="#my-stories">我的故事</a><a href="#love-shop">爱心商城</a></nav>
+  </header>
+
+  <main>
+    <div id="home-view" data-view="home">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="gentle-kicker"><span aria-hidden="true">♡</span> EVERY LITTLE STORY OF US</p>
+            <h1 id="hero-title">我们的故事，<br><span>从这里开始。</span></h1>
+            <p class="hero-description">把回忆写成故事，<br class="mobile-break">在彼此的视角里重新相遇。</p>
+            <div class="hero-actions"><a class="paper-button primary" href="#my-stories">看看我们的故事 <span aria-hidden="true">→</span></a><a class="paper-button secondary" href="#stories">已有故事 <span aria-hidden="true">→</span></a></div>
+            <p class="gentle-note">把平常的日子，写成只属于我们的纪念。<span aria-hidden="true">♡</span></p>
+          </div>
+          <div class="hero-art"><img class="hero-illustration" src="assets/portal/hero.png" alt="两位故事小搭档站在白粉纸张、照片和叶片的拼贴前" width="1536" height="1024" fetchpriority="high"></div>
+        </div>
+      </section>
+
+      <section class="cases-section" id="stories" aria-labelledby="stories-title">
+        <div class="section-inner">
+          <div class="section-heading"><div class="popular-title"><h2 id="stories-title">热门故事</h2><a class="more-link" href="#my-stories">我的故事 <span aria-hidden="true">→</span></a></div><p class="section-aside">不同的片段，都是我们的故事。<span aria-hidden="true">⟶</span></p></div>
+          <div class="archive-tools" id="archive-search" hidden><label class="search-box"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="story-search" type="search" placeholder="找找某一段回忆…" aria-label="搜索故事标题或简介"></label><button class="text-link" id="clear-search">清除搜索</button></div>
+          <p id="result-status" class="sr-only" role="status" aria-live="polite"></p>
+          <div class="case-grid" id="published-grid"></div>
+          <div class="empty-state" id="search-empty" hidden><span aria-hidden="true">♡</span><h3>还没找到这段故事</h3><p>换一个关键词，或者清除搜索再看看。</p><button class="text-link" id="reset-search">清除搜索 →</button></div>
+          <p class="story-section-note" id="placeholder-note">《惊喜》已经可以游玩。也为你自己的故事，留下一页新的位置。</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="workspace-view" id="my-stories" data-view="my-stories" aria-labelledby="workspace-title" hidden>
+      <div class="workspace-heading"><div><p class="gentle-kicker">MY STORY NOTEBOOK</p><h1 id="workspace-title" tabindex="-1">我的故事</h1><p>把你的剧本放进来，先看看，再把它留在故事架上。</p></div><a class="text-link" href="#stories">看看已有故事 <span aria-hidden="true">→</span></a></div>
+      <div class="notebook-layout">
+        <section class="editor-paper" aria-labelledby="editor-title"><div class="editor-heading"><h2 id="editor-title">写下这一篇</h2><span class="draft-indicator" id="draft-status">还没有草稿</span></div>
+          <form id="story-form">
+            <input type="hidden" id="story-id">
+            <label class="field">故事标题<input id="story-title" name="title" maxlength="40" required placeholder="给这段回忆取一个名字"></label>
+            <label class="field">一句简介<textarea id="story-summary" name="summary" rows="2" maxlength="160" required placeholder="卡片上会显示这段简介，最多 160 字"></textarea></label>
+            <fieldset class="cover-field"><legend>选一张故事封面</legend><div class="cover-options"><label class="cover-option"><input type="radio" name="cover" value="train" checked><span class="photo photo-train"></span><span>途中</span></label><label class="cover-option"><input type="radio" name="cover" value="house"><span class="photo photo-house"></span><span>来信</span></label><label class="cover-option"><input type="radio" name="cover" value="forest"><span class="photo photo-forest"></span><span>远方</span></label></div><label class="upload-label">或上传自己的封面<input id="cover-upload" type="file" accept="image/png,image/jpeg,image/webp"></label><p class="field-help" id="cover-help">PNG、JPG 或 WebP，1MB 以内。只保存在当前浏览器。</p><img id="uploaded-cover" class="uploaded-cover" alt="你选择的故事封面" hidden></fieldset>
+            <label class="field">故事正文<textarea id="story-content" name="content" rows="10" maxlength="30000" required placeholder="把剧本粘贴在这里。你的段落、对白和换行都会保留。"></textarea></label>
+            <div class="editor-actions"><button type="button" class="text-link" id="save-draft">保存草稿</button><button class="paper-button primary" type="submit">生成故事预览 <span aria-hidden="true">→</span></button></div>
+            <p id="editor-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+        <aside class="shelf-paper" aria-labelledby="shelf-title"><p class="gentle-kicker">A LITTLE SHELF OF MEMORIES</p><h2 id="shelf-title">已经留下的故事 <span id="story-count">0</span></h2><div id="my-story-list"></div><p class="storage-note">这里的草稿和已发布故事只保存在当前浏览器，不会上传或公开。清理浏览器数据会删除它们。</p><button class="text-link" id="export-stories">导出故事备份 <span aria-hidden="true">↓</span></button></aside>
+      </div>
+    </section>
+
+    <section class="workspace-view shop-view" id="love-shop" data-view="love-shop" aria-labelledby="shop-title" hidden><div class="shop-paper"><span class="shop-heart" aria-hidden="true">♡</span><p class="gentle-kicker">A LITTLE SOMETHING FOR US</p><h1 id="shop-title" tabindex="-1">爱心商城</h1><p>给每一段故事，准备一点小心意。</p><div class="coming-soon">小店正在准备中</div><p class="shop-detail">等你确定商城内容后，再把喜欢的故事封面、纪念贴纸或角色装扮放进来。</p><a class="paper-button secondary" href="#home">先回故事里 <span aria-hidden="true">→</span></a></div></section>
+  </main>
+  <footer class="site-footer"><span>EVERY LITTLE STORY OF US.</span><span>把每一个我们，好好收藏。</span></footer>
+  <div class="storage-banner" id="storage-error" role="alert" hidden></div>
+  <dialog id="story-dialog" aria-labelledby="dialog-title"><div class="dialog-paper"><button class="dialog-close" aria-label="关闭故事">×</button><p id="dialog-eyebrow" class="gentle-kicker"></p><h2 id="dialog-title"></h2><div id="dialog-body"></div><p id="publish-feedback" class="form-feedback" role="status"></p><div class="dialog-actions"><button class="text-link" id="back-to-edit" hidden>返回修改</button><button class="paper-button primary" id="publish-story" hidden>发布故事 <span aria-hidden="true">♡</span></button><button class="paper-button secondary dialog-done">收好这一页 <span aria-hidden="true">→</span></button></div></div></dialog>
+  <template id="story-card-template"><article class="case-card"><button class="case-open"><span class="polaroid"><span class="photo" role="img"></span><span class="tape" aria-hidden="true"></span></span><span class="card-copy"><strong class="card-title"></strong><span class="card-description"></span></span></button><div class="card-footer"><span class="story-card-state"></span><button aria-label="打开故事"><span aria-hidden="true">→</span></button></div></article></template>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol></svg>
+</body>
+</html>

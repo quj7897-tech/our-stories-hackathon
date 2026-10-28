@@ -1,0 +1,66 @@
+/* A full-size, proportional artwork plane: animated elements share its coordinates. */
+.art-world { position:absolute; inset:0; overflow:hidden; }
+.art-world.has-art {
+  left:50%; right:auto; width:auto; min-width:100%; height:100%; aspect-ratio:1942 / 809;
+  transform:translateX(-50%); background:var(--scene-art) center / cover no-repeat;
+}
+.has-art > * { visibility:hidden; }
+/* Keep moving clouds, scenery, straps, fellow passengers and the car rocking. */
+.art-subway > :is(.win,.strap,.pg,.crowd),
+.art-subway2 > :is(.win,.strap,.pg),
+.art-night > :is(.monitor,.stars,.lampglow),
+.art-office > :is(.monitor,.clockpanel,.winbeam),
+.art-meeting > :is(.screen,.people),
+.art-street > :is(.far,.near),
+.art-city > .bus,
+.art-lobby > .sunspot,
+.art-split > :is(.labeltag,.divider),
+.art-call > :is(.halo,.line) { visibility:visible; }
+.has-art .win { left:0; right:auto; top:13%; width:19%; height:40%; border:0; border-radius:0; background:none; box-shadow:none; filter:none; }
+.has-art .win .skywash { display:none; }
+.has-art .win .drift { position:absolute; inset:0; opacity:.45; }
+.has-art > .strap-erase { visibility:visible; position:absolute; width:4.3%; top:5.4%; height:12%; background:#fff0b7; border-radius:40%; }
+.has-art .strap { width:3.9%; height:14%; top:2.5%; z-index:1; }
+.has-art .strap::before { content:none; }
+.has-art .strap .stem { width:10%; height:37%; border-width:2px; background:#dfdac6; }
+.has-art .strap .ring { width:90%; height:auto; aspect-ratio:1; border-width:3px; background:#f4e8c4; box-shadow:inset 0 0 0 5px #fff2ba; }
+.has-art .pg, .has-art .crowd { opacity:.3; bottom:22%; }
+.art-night .stars { inset:8% auto auto 2%; width:20%; height:45%; opacity:.55; }
+.art-night .lampglow { left:auto; right:0; top:34%; width:19%; height:37%; opacity:.3; }
+.art-night .monitor, .art-office .monitor {
+  left:90.5%; right:auto; top:43%; bottom:auto; width:5.6%; height:9.5%;
+  padding:1%; border:0; border-radius:1px; background:#426874; box-shadow:none;
+}
+.art-office .monitor { left:88.2%; top:39.5%; width:6.6%; height:10%; }
+.art-office .clockpanel { left:42%; right:auto; top:12%; width:auto; font-size:clamp(10px,1.3vw,16px); }
+.art-meeting .screen { left:23%; top:9%; width:54%; height:37%; border:0; padding:3%; box-shadow:none; background:transparent; }
+.art-meeting .people { opacity:.4; }
+/* Retain the two original scrolling tracks, now using the same drawn scenery. */
+.art-street .far { inset:0; height:auto; background:var(--scene-art) center / cover no-repeat; opacity:1; }
+.art-street .near {
+  left:-3%; right:-3%; bottom:15%; height:13%; opacity:.35;
+  background:repeating-linear-gradient(90deg,transparent 0 7%,#f5ebc7 7% 8%,transparent 8% 13%);
+  filter:url(#wobble2);
+}
+.art-split .labeltag { background:#fff9e8; color:#3e514b; }
+.art-call .halo { opacity:.45; }
+/* Existing campus and epilogue retain their place-specific scene and live props. */
+.art-campus, .art-epilogue { background:#fff1bf; }
+.art-campus::after,.art-epilogue::after,.art-kitchen::after,.art-cafe::after {
+  content:""; position:absolute; inset:0; pointer-events:none; opacity:.11;
+  background:repeating-radial-gradient(ellipse at 30% 20%,#766b56 0 .5px,transparent .8px 3px);
+  mix-blend-mode:multiply;
+}
+.art-kitchen .wall,.art-cafe .wall { background:#fff0bc; }
+.art-kitchen .floor,.art-cafe .floor { background:#c9c9dd; }
+.art-kitchen .kitchen-counter { background:repeating-linear-gradient(90deg,#b6d5b4 0 23%,#8b9e89 24% 25%); }
+.art-kitchen > :not(.wall):not(.floor),.art-cafe > :not(.wall):not(.floor) { filter:url(#wobble2); }
+.actor { transition:none; }
+.actor .bob { animation:none !important; transform-origin:50% 100%; }
+.actor[data-action="hurry"] .shadow { opacity:.65; }
+/* The story clock pauses scene animations. UI entry animations must keep running:
+   pausing every descendant traps choice/feedback/review overlays at opacity 0. */
+@media (max-width:720px) {
+  .art-world.has-art .clockpanel { left:42%; top:13%; font-size:11px; }
+  .art-split .labeltag { font-size:12px; }
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="data:," />
+<title>Love · 《惊喜》完整一天修正版</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="new-scenes.css" />
+<link rel="stylesheet" href="interaction.css" />
+<link rel="stylesheet" href="godot-bridge.css" />
+<link rel="stylesheet" href="art-motion.css" />
+<link rel="stylesheet" href="game-shell.css" />
+</head>
+<body class="game-page">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="wobble" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n" />
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" />
+    </filter>
+    <filter id="wobble2" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="11" result="n" />
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" />
+    </filter>
+  </defs>
+</svg>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <a class="back-home" href="index.html#stories">← 返回故事列表</a>
+      <b>《惊喜》</b><span class="sub">完整一天 · 绘本互动修正版</span>
+    </div>
+    <div class="hud">
+      <div class="route-status" aria-live="polite">
+        <span id="routeCount">已作出 0 次决定</span>
+        <span id="boxStatus">饭盒由 B 随身保管</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="stagewrap">
+    <div class="stage" id="stage">
+
+      <div class="bg" id="bg"></div>
+      <div class="actors" id="actors"></div>
+
+      <div class="fx">
+        <div class="chip" id="fxclock"></div>
+        <div class="tears" id="tears"><i></i><i></i><i></i></div>
+        <div class="ringcall" id="ringcall"><span class="phicon">✆</span><span>通话中</span><em class="w1"></em><em class="w2"></em></div>
+        <div class="propbox" id="propbox"></div>
+        <div class="dishbub" id="dishbub">
+          <span class="db-tail"></span>
+          <div class="db-pic"><img src="assets/dish.jpg" alt="做的菜" /></div>
+          <span class="db-cap">A 最爱吃的那道菜</span>
+        </div>
+        <div class="chatbub" id="chatbub"></div>
+        <div class="thinkbub" id="thinkbub">
+          <span class="tb-tail"></span>
+          <span class="tb-txt"></span>
+        </div>
+        <div class="doorbub" id="doorbub">
+          <span class="db-tail"></span>
+          <div class="dr-scene">
+            <div class="dr-wall"></div>
+            <div class="dr-door"><i class="knob"></i></div>
+            <div class="dr-girl"><i class="eye l"></i><i class="eye r"></i><i class="blush l"></i><i class="blush r"></i></div>
+            <div class="dr-hand"></div>
+          </div>
+          <span class="db-cap">「猜猜我是谁？」</span>
+        </div>
+        <div class="toast" id="toast"></div>
+        <div class="phone" id="phone">
+          <div class="ph-head"><span class="back">‹</span><b class="phtitle">微信</b><span class="dots">···</span></div>
+          <div class="ph-body" id="phbody"></div>
+        </div>
+        <div class="themecard" id="themecard"></div>
+      </div>
+
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="scenebadge" id="scenebadge"><b id="sbTitle"></b><span id="sbTime"></span></div>
+
+      <div class="caption" id="caption">
+        <span class="who" id="capWho"></span>
+        <span class="captext" id="capText"></span>
+        <span class="hint">点击显示全部</span>
+        <button class="capnext" id="capNext" title="继续">继续 ▸</button>
+      </div>
+
+      <div class="choices" id="choices" role="dialog" aria-modal="true" aria-labelledby="chq">
+        <div class="chcard">
+          <div class="choice-status" id="choiceStatus"></div>
+          <div class="chq" id="chq" tabindex="-1"></div>
+          <div class="ch-inspect" id="chInspect" aria-label="可查看的物件"></div>
+          <div class="ch-inspect-text" id="chInspectText" aria-live="polite" hidden></div>
+          <div class="chopt" id="chopts"></div>
+          <div class="chfb" id="chfb" aria-live="polite"></div>
+          <div class="draft-panel" id="draftPanel" hidden>
+            <div class="draft-label" id="draftLabel">消息草稿</div>
+            <div class="draft-text" id="draftText" aria-live="polite"></div>
+            <button class="bigbtn" id="commitChoice" type="button">就这样发送</button>
+          </div>
+          <button class="bigbtn" id="outcomeContinue" type="button" hidden>继续故事 ▸</button>
+        </div>
+      </div>
+
+      <div class="startcard" id="startcard">
+        <div class="sc-inner">
+          <div class="sc-t">《惊喜》</div>
+          <div class="sc-s">爱的译差 —— 当我想让你感受到爱的时候，你却没有力气接住它</div>
+          <div class="sc-d">
+            在原来的绘本动画里，替 B 和 A 做出每一个决定。<br>
+            保留前半段 <b>21 个决策节点</b>，接回会议、归途、站台与晚间尾声。<br>
+            故事会停下来等你，不同选择会展开不同的相遇、回应与去留。
+          </div>
+          <button class="bigbtn" id="btnStart">开始故事</button>
+          <button class="bigbtn ghost" id="btnAfternoon">直接体验下午剧情</button>
+          <div class="sc-tip">下午入口采用已完成上午交接的示例路线，可从下方记录回退重选。</div>
+          <div class="sc-tip">空格 = 播放 / 暂停　·　← = 上一步　·　→ = 继续</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="game-hint" id="gameHint" role="status">故事包含完整一天。演出会在选择处停下来，选好行动后继续。</p>
+  <div class="ctrl">
+    <button class="btn" id="btnPrev" title="返回上一处决定（←）">⏮ 上一步</button>
+    <button class="btn play" id="btnPlay" title="播放 / 暂停（空格）">⏸ 暂停</button>
+    <button class="btn" id="btnNext" title="继续当前演出；选择处会停下（→）">继续 ▸</button>
+    <span class="sep"></span>
+    <button class="btn ghost" id="btnAuto">自动播放：开</button>
+    <button class="btn ghost" id="btnSpeed">速度 1.0×</button>
+    <button class="btn ghost" id="btnSound">声音：开</button>
+    <span class="flex"></span>
+    <span class="pct" id="pct">0%</span>
+  </div>
+
+  <div class="bar"><i id="barFill"></i></div>
+
+  <h2 class="journey-label">这一轮的选择</h2>
+  <div class="chapters" id="chapters" aria-label="本轮已走过的决定，可返回重选"></div>
+
+  <footer class="foot">
+    剧本 / 素材：作者本人　·　原画面与动画演出　·　选择改变接下来的故事
+  </footer>
+
+</div>
+
+<div class="review" id="review" role="dialog" aria-modal="true" aria-labelledby="endingTitle">
+  <div class="rv-card">
+    <div class="rv-h">
+      <span class="rv-tag">复盘</span>
+      <b id="endingTitle" tabindex="-1">这一天留下的回应</b>
+      <button class="rv-close" id="rvClose">✕</button>
+    </div>
+    <div class="rv-body">
+      <div class="rv-sum" id="rvSum"></div>
+      <div class="rv-sec">这一刻，实际发生了什么</div>
+      <div class="rv-list" id="endingFacts"></div>
+      <div class="rv-sec">你走过的每一步</div>
+      <div class="rv-list" id="rvList"></div>
+      <div class="rv-sec">带走一个问题</div>
+      <div class="rv-note" id="endingReflection"></div>
+      <div class="rv-sec">另一条路线</div>
+      <div class="rv-list" id="endingUnseen"></div>
+      <div class="rv-note">故事走到当天 <b>20:00</b>。送饭的交接、见面的邀请和需要的空间，都按这一轮的真实选择记录。</div>
+      <div class="rv-btns">
+        <button class="bigbtn ghost" id="btnReplay">重看这一轮</button>
+        <button class="bigbtn ghost" id="exportBtn">保存这轮经历</button>
+        <button class="bigbtn" id="btnRestart">换一种选择重走</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="story.js"></script>
+<script src="full-day.js"></script>
+<script src="engine.js"></script>
+<script src="cinematic-scenes.js"></script>
+<script src="full-day-scenes.js"></script>
+<script src="motion.js"></script>
+<script src="scene-art.js"></script>
+<script src="cinema.js"></script>
+<script src="app.js"></script>
+<script src="godot-bridge.js"></script>
+</body>
+</html>

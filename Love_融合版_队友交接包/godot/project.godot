@@ -1,0 +1,16 @@
+config_version=5
+[application]
+config/name="Love · First Two Scenes"
+run/main_scene="res://stage.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="disabled"
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.96, 0.94, 0.9, 1)
+[audio]
+driver/enable_input=false

@@ -1,0 +1,613 @@
+{
+  "baseline": "Love_融合版_队友交接包",
+  "purpose": "原版视觉文件字节基准；此清单使交付包测试不依赖原下载目录。",
+  "algorithm": "SHA-256",
+  "counts": {
+    "originalStyles": 2,
+    "webAssets": 35,
+    "godotRuntime": 7,
+    "godotSource": 76
+  },
+  "files": {
+    "dist/style.css": {
+      "group": "originalStyles",
+      "bytes": 58043,
+      "sha256": "6116683b6eced2c5043aef1d5af6d524cb5bfb249a85b028552f517e05ba3dfd"
+    },
+    "dist/godot-bridge.css": {
+      "group": "originalStyles",
+      "bytes": 407,
+      "sha256": "83f6d19355d21512bb79a1a0c120bc9f9f91996b987bc09b1339975ab6667aac"
+    },
+    "dist/assets/dish.jpg": {
+      "group": "webAssets",
+      "bytes": 318614,
+      "sha256": "59a400ffaae7838d76dcb7c2a5eda618d6db1517df7bd8afe638a10148364c6a"
+    },
+    "dist/assets/female-actions.png": {
+      "group": "webAssets",
+      "bytes": 1939837,
+      "sha256": "6b84e16d3ee6661d31590c18fe3722998a0ccce71581fb755435777e8d521713"
+    },
+    "dist/assets/frames/boy_00.png": {
+      "group": "webAssets",
+      "bytes": 73398,
+      "sha256": "64a5a785f88556b00d736f6927ba73ac6004aa4e1138dbae49dd05f638fb8ed5"
+    },
+    "dist/assets/frames/boy_01.png": {
+      "group": "webAssets",
+      "bytes": 74266,
+      "sha256": "54d014d093fa0f10ee2d3adf68e9193cf2f394bae4cc2b4da30ffd1caac83493"
+    },
+    "dist/assets/frames/boy_02.png": {
+      "group": "webAssets",
+      "bytes": 74181,
+      "sha256": "ba37540c41f852ec1afd32479a58441190e9021f32f2fc85c3f29e80bf0cd0f8"
+    },
+    "dist/assets/frames/boy_03.png": {
+      "group": "webAssets",
+      "bytes": 74254,
+      "sha256": "ea4f7357f4d0e537a8b4f4c873fcf116bd530e21620864399a7080d44bd795ba"
+    },
+    "dist/assets/frames/boy_04.png": {
+      "group": "webAssets",
+      "bytes": 81612,
+      "sha256": "f8e0531c717eb7b164986bfa06cafeb3e3acc2c41689e73a02343bde8c48cc43"
+    },
+    "dist/assets/frames/boy_05.png": {
+      "group": "webAssets",
+      "bytes": 80406,
+      "sha256": "4632f841faf9201eedc1151d063598d06199877f52322f31846fbebad148113f"
+    },
+    "dist/assets/frames/boy_06.png": {
+      "group": "webAssets",
+      "bytes": 82483,
+      "sha256": "6f6a81f028641b0a39119ef451ad9ff7694bf67d93d922eaabde658237b64711"
+    },
+    "dist/assets/frames/boy_07.png": {
+      "group": "webAssets",
+      "bytes": 81241,
+      "sha256": "6670094b7e5097b0766e4c41f68089ab861d0b37b7c36d340b505dd5cf673c22"
+    },
+    "dist/assets/frames/boy_08.png": {
+      "group": "webAssets",
+      "bytes": 78810,
+      "sha256": "a5595bcc8a1e186956c12766a73a8b018c89ee24759e2237dd32bcdf46e1064f"
+    },
+    "dist/assets/frames/boy_09.png": {
+      "group": "webAssets",
+      "bytes": 80305,
+      "sha256": "ac93c4dd2ec33e1f36a24cff2f5b57776428c4a1655f795714ed2af1794da6d8"
+    },
+    "dist/assets/frames/boy_10.png": {
+      "group": "webAssets",
+      "bytes": 81138,
+      "sha256": "e6ca1feef379b5a8ccff95b4c776938ae66768c318636fa1dbe1a1fd05ead2f8"
+    },
+    "dist/assets/frames/boy_11.png": {
+      "group": "webAssets",
+      "bytes": 78846,
+      "sha256": "31c1282c477a9df91ded9101a390dc6b7e5beedd4340824af1b674f9b85dd37e"
+    },
+    "dist/assets/frames/boy_12.png": {
+      "group": "webAssets",
+      "bytes": 74016,
+      "sha256": "fa259add378b94e894b7f3d298dc315d7192878869d5f0771a256fc8e1f0d6a7"
+    },
+    "dist/assets/frames/boy_13.png": {
+      "group": "webAssets",
+      "bytes": 78184,
+      "sha256": "4a77b3f561e68d64eee04f31f7032b8a7d3e5bcb70c4f34b8fd832d06ccc9a7e"
+    },
+    "dist/assets/frames/boy_14.png": {
+      "group": "webAssets",
+      "bytes": 81047,
+      "sha256": "297b29dc401f38903e29da16bddf57f4e2518c80519a973e5e370bb70900a033"
+    },
+    "dist/assets/frames/boy_15.png": {
+      "group": "webAssets",
+      "bytes": 82562,
+      "sha256": "5609156a323bbf01f4ce6e73fba7d0faf2041748cc581e63049cfb8281e06822"
+    },
+    "dist/assets/frames/girl_00.png": {
+      "group": "webAssets",
+      "bytes": 59213,
+      "sha256": "87b6436de48533bfd73d870e7d8271cb5874778c5f53ec09d3bfd3b5f789c396"
+    },
+    "dist/assets/frames/girl_01.png": {
+      "group": "webAssets",
+      "bytes": 59795,
+      "sha256": "3eee2787a98d71f9ef2be05cfb97471065babadea3c25415d078b22984afc9ec"
+    },
+    "dist/assets/frames/girl_02.png": {
+      "group": "webAssets",
+      "bytes": 59599,
+      "sha256": "db3c0f3e143a3f000eb88905ff9582c77553863a2699d4f68415c97ee10d849e"
+    },
+    "dist/assets/frames/girl_03.png": {
+      "group": "webAssets",
+      "bytes": 59903,
+      "sha256": "ac5437b8797c21c197bf2f2cc87da8247ad287bbe488013a4c4a015acc695eb9"
+    },
+    "dist/assets/frames/girl_04.png": {
+      "group": "webAssets",
+      "bytes": 62262,
+      "sha256": "bfa9a4c00f64e0687eb4d4b3264cf51945c8a06e8c6388e568d16b811736aa6b"
+    },
+    "dist/assets/frames/girl_05.png": {
+      "group": "webAssets",
+      "bytes": 59254,
+      "sha256": "dbbbcde0361e2309a55a74836957c9daf39df401b4fc0bb04eb9a0c09e79b215"
+    },
+    "dist/assets/frames/girl_06.png": {
+      "group": "webAssets",
+      "bytes": 63471,
+      "sha256": "5a705d8eb637b614fafa9b86ed2f5f716e139632407b62b172ce879b5755c239"
+    },
+    "dist/assets/frames/girl_07.png": {
+      "group": "webAssets",
+      "bytes": 61524,
+      "sha256": "e06211c37beb26ba83ef1bf00b753501293d9ec12aeb62d7af43664f28ab3e33"
+    },
+    "dist/assets/frames/girl_08.png": {
+      "group": "webAssets",
+      "bytes": 62363,
+      "sha256": "61f91ee342d8474aa78b9f234bfbb9fabab8b3a8881756a71a33099ba47ce2cc"
+    },
+    "dist/assets/frames/girl_09.png": {
+      "group": "webAssets",
+      "bytes": 64635,
+      "sha256": "86435944ed5ec5a5934e5da8a708ce38ca4d72405296ce1719e63983a7689c1d"
+    },
+    "dist/assets/frames/girl_10.png": {
+      "group": "webAssets",
+      "bytes": 65469,
+      "sha256": "25de185b2762bb71e04a4d116d7d6f24a579d15d6bab891a5ac8bb14d6d773ca"
+    },
+    "dist/assets/frames/girl_11.png": {
+      "group": "webAssets",
+      "bytes": 63664,
+      "sha256": "cc02aec86c4e9b246cc21c3a4fbc0072af23611833c01e7859a4c2da0c52b757"
+    },
+    "dist/assets/frames/girl_12.png": {
+      "group": "webAssets",
+      "bytes": 56874,
+      "sha256": "3ea1561fecdd4995b48ca8e978d2355ac139c282f13ef2d77617d7164bb46938"
+    },
+    "dist/assets/frames/girl_13.png": {
+      "group": "webAssets",
+      "bytes": 58521,
+      "sha256": "31624df26dc9c90cc96ead954d53467e5fd50fe50491209a6c2a71ab5f58b540"
+    },
+    "dist/assets/frames/girl_14.png": {
+      "group": "webAssets",
+      "bytes": 58552,
+      "sha256": "db34916e1a2dcbb352227b78642b583341a66bb103777fd63f33c13e2fc07b6c"
+    },
+    "dist/assets/frames/girl_15.png": {
+      "group": "webAssets",
+      "bytes": 59180,
+      "sha256": "fcf84a7218808c57acd9698930df4f745162731ae2e6c7e6a6a88b4d9f729327"
+    },
+    "dist/assets/male-actions.png": {
+      "group": "webAssets",
+      "bytes": 1410178,
+      "sha256": "903ac6d242c133e75c00f9ac76d52b8a9562e2502d2c0a1df74347e1bd5ea9e0"
+    },
+    "dist/godot/index.audio.position.worklet.js": {
+      "group": "godotRuntime",
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    "dist/godot/index.audio.worklet.js": {
+      "group": "godotRuntime",
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    "dist/godot/index.html": {
+      "group": "godotRuntime",
+      "bytes": 6251,
+      "sha256": "fb9a1dc25bf41ff9689e583b166a0e10bec9c361dc9ae067b848c03b27b1c68d"
+    },
+    "dist/godot/index.js": {
+      "group": "godotRuntime",
+      "bytes": 279815,
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
+    },
+    "dist/godot/index.pck": {
+      "group": "godotRuntime",
+      "bytes": 4611920,
+      "sha256": "4f206283b6d72f3868cbbb7234e1fa3e7b996b818eeb0131a109014f14e9cab4"
+    },
+    "dist/godot/index.png": {
+      "group": "godotRuntime",
+      "bytes": 21443,
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    "dist/godot/index.wasm.gz": {
+      "group": "godotRuntime",
+      "bytes": 10153810,
+      "sha256": "9ed85643181ce4cb0434d8f69c1691df1c8f206852578a94d360d01078d97031"
+    },
+    "godot/Godot-LICENSE.txt": {
+      "group": "godotSource",
+      "bytes": 1149,
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+    },
+    "godot/README.md": {
+      "group": "godotSource",
+      "bytes": 1619,
+      "sha256": "dfa6602e03fe04d33fef00ff2e462e15249a149075d392ae6b89fda65c02b63f"
+    },
+    "godot/assets/backgrounds/office-night-crayon.png": {
+      "group": "godotSource",
+      "bytes": 2029593,
+      "sha256": "11fa0a3947f6d9bfe013ecbe0e1a8c10139f1e24d7bd8380c0bfd7ec9fb5a947"
+    },
+    "godot/assets/backgrounds/office-night-crayon.png.import": {
+      "group": "godotSource",
+      "bytes": 980,
+      "sha256": "ebaa73553949d82494b37c1a530957fce8894a894f15f8808bb5256ef68b7d45"
+    },
+    "godot/assets/backgrounds/subway-color-pencil-v2.png": {
+      "group": "godotSource",
+      "bytes": 1947468,
+      "sha256": "f6d0ea2d007df83572282b64af636ec9cba0c6cb6c5ea3ba76c01cabd53a0934"
+    },
+    "godot/assets/backgrounds/subway-color-pencil-v2.png.import": {
+      "group": "godotSource",
+      "bytes": 989,
+      "sha256": "39f9915c2f3cd9e81f78d20ac7b8fce2c8e250da9fc42aff227e2352116f6357"
+    },
+    "godot/assets/frames/boy_00.png": {
+      "group": "godotSource",
+      "bytes": 73398,
+      "sha256": "64a5a785f88556b00d736f6927ba73ac6004aa4e1138dbae49dd05f638fb8ed5"
+    },
+    "godot/assets/frames/boy_00.png.import": {
+      "group": "godotSource",
+      "bytes": 935,
+      "sha256": "fb1da077860f5102a1b3d28d73b40c111b9c8ddbc9971ce9789d658f4cc9bb07"
+    },
+    "godot/assets/frames/boy_01.png": {
+      "group": "godotSource",
+      "bytes": 74266,
+      "sha256": "54d014d093fa0f10ee2d3adf68e9193cf2f394bae4cc2b4da30ffd1caac83493"
+    },
+    "godot/assets/frames/boy_01.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "28dfa18fa0d0aa1e5e8095aef90c851a5479617cc6ea4162557512e00ade376c"
+    },
+    "godot/assets/frames/boy_02.png": {
+      "group": "godotSource",
+      "bytes": 74181,
+      "sha256": "ba37540c41f852ec1afd32479a58441190e9021f32f2fc85c3f29e80bf0cd0f8"
+    },
+    "godot/assets/frames/boy_02.png.import": {
+      "group": "godotSource",
+      "bytes": 935,
+      "sha256": "02a9cb0d9c9795bc07a9ef7c446b7570cf05e71df3561a5906b5534f8fb82d25"
+    },
+    "godot/assets/frames/boy_03.png": {
+      "group": "godotSource",
+      "bytes": 74254,
+      "sha256": "ea4f7357f4d0e537a8b4f4c873fcf116bd530e21620864399a7080d44bd795ba"
+    },
+    "godot/assets/frames/boy_03.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "d55cfb58f010e3429705b8d44c9ddf198445dc2189c85bf5ce71d4ba44c8d8f2"
+    },
+    "godot/assets/frames/boy_04.png": {
+      "group": "godotSource",
+      "bytes": 81612,
+      "sha256": "f8e0531c717eb7b164986bfa06cafeb3e3acc2c41689e73a02343bde8c48cc43"
+    },
+    "godot/assets/frames/boy_04.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "d2e330f037ca5b2eb6f93f34fd2e114d40947d8ab55e012baf1f13a457b9977e"
+    },
+    "godot/assets/frames/boy_05.png": {
+      "group": "godotSource",
+      "bytes": 80406,
+      "sha256": "4632f841faf9201eedc1151d063598d06199877f52322f31846fbebad148113f"
+    },
+    "godot/assets/frames/boy_05.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "374707e4e6b8f3a05b22a15c0d3f65ca86a81e7f8a9b4840924eb327e5e9e2a6"
+    },
+    "godot/assets/frames/boy_06.png": {
+      "group": "godotSource",
+      "bytes": 82483,
+      "sha256": "6f6a81f028641b0a39119ef451ad9ff7694bf67d93d922eaabde658237b64711"
+    },
+    "godot/assets/frames/boy_06.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "532719f87703c23495e56843594d32ebc4bfabc63803b79b5d8e4627ad08df7f"
+    },
+    "godot/assets/frames/boy_07.png": {
+      "group": "godotSource",
+      "bytes": 81241,
+      "sha256": "6670094b7e5097b0766e4c41f68089ab861d0b37b7c36d340b505dd5cf673c22"
+    },
+    "godot/assets/frames/boy_07.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "d2a57860d69fbd91006dd16d8e7b8b6d58c8604fb24c8c50ef2f562665efa9c0"
+    },
+    "godot/assets/frames/boy_08.png": {
+      "group": "godotSource",
+      "bytes": 78810,
+      "sha256": "a5595bcc8a1e186956c12766a73a8b018c89ee24759e2237dd32bcdf46e1064f"
+    },
+    "godot/assets/frames/boy_08.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "5b2941d86b414eb5caa68d0e19ea56850ee8912fae6b2e8893467c535bff9ca5"
+    },
+    "godot/assets/frames/boy_09.png": {
+      "group": "godotSource",
+      "bytes": 80305,
+      "sha256": "ac93c4dd2ec33e1f36a24cff2f5b57776428c4a1655f795714ed2af1794da6d8"
+    },
+    "godot/assets/frames/boy_09.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "dad78428defee730ceda3f1520fcfe20c3950273314eb8a0407c5888ad3c3485"
+    },
+    "godot/assets/frames/boy_10.png": {
+      "group": "godotSource",
+      "bytes": 81138,
+      "sha256": "e6ca1feef379b5a8ccff95b4c776938ae66768c318636fa1dbe1a1fd05ead2f8"
+    },
+    "godot/assets/frames/boy_10.png.import": {
+      "group": "godotSource",
+      "bytes": 935,
+      "sha256": "58e97eb0b5c8e9d84156900dfc53435587044da4f05591b2baa63ac4c3b34e29"
+    },
+    "godot/assets/frames/boy_11.png": {
+      "group": "godotSource",
+      "bytes": 78846,
+      "sha256": "31c1282c477a9df91ded9101a390dc6b7e5beedd4340824af1b674f9b85dd37e"
+    },
+    "godot/assets/frames/boy_11.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "d7576ba6eb7f5f16f5e9dc75a641ddef5ada8aef254c7fa394775764bb194199"
+    },
+    "godot/assets/frames/boy_12.png": {
+      "group": "godotSource",
+      "bytes": 74016,
+      "sha256": "fa259add378b94e894b7f3d298dc315d7192878869d5f0771a256fc8e1f0d6a7"
+    },
+    "godot/assets/frames/boy_12.png.import": {
+      "group": "godotSource",
+      "bytes": 935,
+      "sha256": "27137727fbb29c0af7ad7804fd905b098c2d8324d215e958d549c1604ea29351"
+    },
+    "godot/assets/frames/boy_13.png": {
+      "group": "godotSource",
+      "bytes": 78184,
+      "sha256": "4a77b3f561e68d64eee04f31f7032b8a7d3e5bcb70c4f34b8fd832d06ccc9a7e"
+    },
+    "godot/assets/frames/boy_13.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "80d5f82af10db7111674257e21b30fd8f784099e266c28bc2e6ff15a024bb9f8"
+    },
+    "godot/assets/frames/boy_14.png": {
+      "group": "godotSource",
+      "bytes": 81047,
+      "sha256": "297b29dc401f38903e29da16bddf57f4e2518c80519a973e5e370bb70900a033"
+    },
+    "godot/assets/frames/boy_14.png.import": {
+      "group": "godotSource",
+      "bytes": 936,
+      "sha256": "d5f5c1b309b3ce073cf5c85e2dcfef025285d62aa07ce1eb9eaa417a75d59a67"
+    },
+    "godot/assets/frames/boy_15.png": {
+      "group": "godotSource",
+      "bytes": 82562,
+      "sha256": "5609156a323bbf01f4ce6e73fba7d0faf2041748cc581e63049cfb8281e06822"
+    },
+    "godot/assets/frames/boy_15.png.import": {
+      "group": "godotSource",
+      "bytes": 935,
+      "sha256": "d1a7e526da5238fefe88f48bf9d22e8cbe3f5e3a1c985c14c255f636448fefbb"
+    },
+    "godot/assets/frames/girl_00.png": {
+      "group": "godotSource",
+      "bytes": 59213,
+      "sha256": "87b6436de48533bfd73d870e7d8271cb5874778c5f53ec09d3bfd3b5f789c396"
+    },
+    "godot/assets/frames/girl_00.png.import": {
+      "group": "godotSource",
+      "bytes": 938,
+      "sha256": "eda5ca07913c426bd183068fe7ce739e422ab35c008e04d5050f16e2b7ca0a6d"
+    },
+    "godot/assets/frames/girl_01.png": {
+      "group": "godotSource",
+      "bytes": 59795,
+      "sha256": "3eee2787a98d71f9ef2be05cfb97471065babadea3c25415d078b22984afc9ec"
+    },
+    "godot/assets/frames/girl_01.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "e7f490fec71d867d84f577978fcd3bf9163cb4afdda9859ac6084ed293431d5c"
+    },
+    "godot/assets/frames/girl_02.png": {
+      "group": "godotSource",
+      "bytes": 59599,
+      "sha256": "db3c0f3e143a3f000eb88905ff9582c77553863a2699d4f68415c97ee10d849e"
+    },
+    "godot/assets/frames/girl_02.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "ccba7dd0e7da538570fe91a0ef098eb04ab6c323c5d505a45ab2cb73661349bc"
+    },
+    "godot/assets/frames/girl_03.png": {
+      "group": "godotSource",
+      "bytes": 59903,
+      "sha256": "ac5437b8797c21c197bf2f2cc87da8247ad287bbe488013a4c4a015acc695eb9"
+    },
+    "godot/assets/frames/girl_03.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "4b2839dcdebcdbef31b0a3c613e6fc4537cd477ae35bcd02dd0ee37a8635771f"
+    },
+    "godot/assets/frames/girl_04.png": {
+      "group": "godotSource",
+      "bytes": 62262,
+      "sha256": "bfa9a4c00f64e0687eb4d4b3264cf51945c8a06e8c6388e568d16b811736aa6b"
+    },
+    "godot/assets/frames/girl_04.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "d4a0c207823ad5f57b7f834f7d4723ce514edf5dd7ec1b207bfc2f154f8fef2a"
+    },
+    "godot/assets/frames/girl_05.png": {
+      "group": "godotSource",
+      "bytes": 59254,
+      "sha256": "dbbbcde0361e2309a55a74836957c9daf39df401b4fc0bb04eb9a0c09e79b215"
+    },
+    "godot/assets/frames/girl_05.png.import": {
+      "group": "godotSource",
+      "bytes": 938,
+      "sha256": "e2844679cc7accdc3026da865bec64f500fb5ce7692529c258b047faf9960925"
+    },
+    "godot/assets/frames/girl_06.png": {
+      "group": "godotSource",
+      "bytes": 63471,
+      "sha256": "5a705d8eb637b614fafa9b86ed2f5f716e139632407b62b172ce879b5755c239"
+    },
+    "godot/assets/frames/girl_06.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "b965c14d1bae6b8c177fe7c29dfd0de550ad19e783ccb7e3bb53e84e926fc235"
+    },
+    "godot/assets/frames/girl_07.png": {
+      "group": "godotSource",
+      "bytes": 61524,
+      "sha256": "e06211c37beb26ba83ef1bf00b753501293d9ec12aeb62d7af43664f28ab3e33"
+    },
+    "godot/assets/frames/girl_07.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "2a3067f3150e3ea7f8fefb34684d438d0fb20ec80852e75d4e89eab7608c3dd7"
+    },
+    "godot/assets/frames/girl_08.png": {
+      "group": "godotSource",
+      "bytes": 62363,
+      "sha256": "61f91ee342d8474aa78b9f234bfbb9fabab8b3a8881756a71a33099ba47ce2cc"
+    },
+    "godot/assets/frames/girl_08.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "634cb6091e49fc459f8b410e8726705508ffe147e20c8cbf993d995c3709bfb8"
+    },
+    "godot/assets/frames/girl_09.png": {
+      "group": "godotSource",
+      "bytes": 64635,
+      "sha256": "86435944ed5ec5a5934e5da8a708ce38ca4d72405296ce1719e63983a7689c1d"
+    },
+    "godot/assets/frames/girl_09.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "0da20df34a95623634f1de691d6e90bb00b1c56b31ef6f9e1c38b752506a8f3b"
+    },
+    "godot/assets/frames/girl_10.png": {
+      "group": "godotSource",
+      "bytes": 65469,
+      "sha256": "25de185b2762bb71e04a4d116d7d6f24a579d15d6bab891a5ac8bb14d6d773ca"
+    },
+    "godot/assets/frames/girl_10.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "be220ec292158501fb133ec85e6998b853524aea7a299c5200bd8a3483576328"
+    },
+    "godot/assets/frames/girl_11.png": {
+      "group": "godotSource",
+      "bytes": 63664,
+      "sha256": "cc02aec86c4e9b246cc21c3a4fbc0072af23611833c01e7859a4c2da0c52b757"
+    },
+    "godot/assets/frames/girl_11.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "c32330a28ca40a3850bd93bb89d4f8793707452e4008c01e6bfe9aefb614b08b"
+    },
+    "godot/assets/frames/girl_12.png": {
+      "group": "godotSource",
+      "bytes": 56874,
+      "sha256": "3ea1561fecdd4995b48ca8e978d2355ac139c282f13ef2d77617d7164bb46938"
+    },
+    "godot/assets/frames/girl_12.png.import": {
+      "group": "godotSource",
+      "bytes": 938,
+      "sha256": "d821b4c3eafe39552493edb01fc4225de58c7831ee62ac74e50e524103d85a1a"
+    },
+    "godot/assets/frames/girl_13.png": {
+      "group": "godotSource",
+      "bytes": 58521,
+      "sha256": "31624df26dc9c90cc96ead954d53467e5fd50fe50491209a6c2a71ab5f58b540"
+    },
+    "godot/assets/frames/girl_13.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "48cf3fca93d34144fe1d38a6e6b3af3615167e8ff2f21e779bae7ab5e5243c14"
+    },
+    "godot/assets/frames/girl_14.png": {
+      "group": "godotSource",
+      "bytes": 58552,
+      "sha256": "db34916e1a2dcbb352227b78642b583341a66bb103777fd63f33c13e2fc07b6c"
+    },
+    "godot/assets/frames/girl_14.png.import": {
+      "group": "godotSource",
+      "bytes": 939,
+      "sha256": "fd273188e3f0875129d7f4f69aaca4e06a8f35ecec209e0a4c1a270249bad416"
+    },
+    "godot/assets/frames/girl_15.png": {
+      "group": "godotSource",
+      "bytes": 59180,
+      "sha256": "fcf84a7218808c57acd9698930df4f745162731ae2e6c7e6a6a88b4d9f729327"
+    },
+    "godot/assets/frames/girl_15.png.import": {
+      "group": "godotSource",
+      "bytes": 938,
+      "sha256": "021a866a0e6891fe45dd162145ba0ea795b257f6229e5b79519f1cb0c033cd7c"
+    },
+    "godot/compress-web.cjs": {
+      "group": "godotSource",
+      "bytes": 1598,
+      "sha256": "59f1f62b91b627c7daab036e4d0c3eea48a6e6a6e9be46c00e98d06226ef21b6"
+    },
+    "godot/export_presets.cfg": {
+      "group": "godotSource",
+      "bytes": 518,
+      "sha256": "68f882db21f6ec3169297897120aa44e600aa35338d4fe915f5d28af1749a6f4"
+    },
+    "godot/project.godot": {
+      "group": "godotSource",
+      "bytes": 537,
+      "sha256": "6ec3f9608e992d7ad7f3f0d474002efc39e0b915d566e75bafe6c799e7043099"
+    },
+    "godot/stage.gd": {
+      "group": "godotSource",
+      "bytes": 3002,
+      "sha256": "2e4805825d07d1694cbe1602b7b9856e3d29fd4572944495ac8ebc0fc420f11b"
+    },
+    "godot/stage.gd.uid": {
+      "group": "godotSource",
+      "bytes": 20,
+      "sha256": "410d9a30cfdc9f87bbdd8a414156aa5a04a27f8e920bef236aa05303e36b7dd5"
+    },
+    "godot/stage.tscn": {
+      "group": "godotSource",
+      "bytes": 155,
+      "sha256": "33329b326d0405a4a981472e49f5f4a4d4579bd96c6bc2f62bcc8c562ba98a21"
+    }
+  }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="data:," />
+<title>Love · 《惊喜》互动动画</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="godot-bridge.css" />
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="wobble" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="n" />
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" />
+    </filter>
+    <filter id="wobble2" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="11" result="n" />
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" />
+    </filter>
+  </defs>
+</svg>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <b>《惊喜》</b><span class="sub">互动动画 · 爱的译差</span>
+    </div>
+    <div class="hud">
+      <div class="meter" id="meter" title="心的距离">
+        <span class="dot b">B</span>
+        <div class="bar"><i id="meterFill"></i></div>
+        <span class="dot a">A</span>
+        <span class="mval" id="meterVal">50</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="stagewrap">
+    <div class="stage" id="stage">
+
+      <div class="bg" id="bg"></div>
+      <div class="actors" id="actors"></div>
+
+      <div class="fx">
+        <div class="chip" id="fxclock"></div>
+        <div class="tears" id="tears"><i></i><i></i><i></i></div>
+        <div class="ringcall" id="ringcall"><span class="phicon">✆</span><span>通话中</span><em class="w1"></em><em class="w2"></em></div>
+        <div class="propbox" id="propbox"></div>
+        <div class="dishbub" id="dishbub">
+          <span class="db-tail"></span>
+          <div class="db-pic"><img src="assets/dish.jpg" alt="做的菜" /></div>
+          <span class="db-cap">A 最爱吃的那道菜</span>
+        </div>
+        <div class="chatbub" id="chatbub"></div>
+        <div class="thinkbub" id="thinkbub">
+          <span class="tb-tail"></span>
+          <span class="tb-txt"></span>
+        </div>
+        <div class="doorbub" id="doorbub">
+          <span class="db-tail"></span>
+          <div class="dr-scene">
+            <div class="dr-wall"></div>
+            <div class="dr-door"><i class="knob"></i></div>
+            <div class="dr-girl"><i class="eye l"></i><i class="eye r"></i><i class="blush l"></i><i class="blush r"></i></div>
+            <div class="dr-hand"></div>
+          </div>
+          <span class="db-cap">「猜猜我是谁？」</span>
+        </div>
+        <div class="toast" id="toast"></div>
+        <div class="phone" id="phone">
+          <div class="ph-head"><span class="back">‹</span><b class="phtitle">微信</b><span class="dots">···</span></div>
+          <div class="ph-body" id="phbody"></div>
+        </div>
+        <div class="themecard" id="themecard"></div>
+      </div>
+
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="scenebadge" id="scenebadge"><b id="sbTitle"></b><span id="sbTime"></span></div>
+
+      <div class="caption" id="caption">
+        <span class="who" id="capWho"></span>
+        <span class="captext" id="capText"></span>
+        <span class="hint">点击显示全部</span>
+        <button class="capnext" id="capNext" title="继续">继续 ▸</button>
+      </div>
+
+      <div class="choices" id="choices">
+        <div class="chcard">
+          <div class="chq" id="chq"></div>
+          <div class="chopt" id="chopts"></div>
+          <div class="chfb" id="chfb"></div>
+        </div>
+      </div>
+
+      <div class="startcard" id="startcard">
+        <div class="sc-inner">
+          <div class="sc-t">《惊喜》</div>
+          <div class="sc-s">爱的译差 —— 当我想让你感受到爱的时候，你却没有力气接住它</div>
+          <div class="sc-d">
+            一段约 <b>8 分钟</b> 的双视角动画，中间有 <b>3 个交互节点</b>：你可以替 B 或 A 做一次选择，
+            每次选择都会改变「心的距离」，故事仍会继续。
+          </div>
+          <button class="bigbtn" id="btnStart">开始观看</button>
+          <div class="sc-tip">空格 = 播放 / 暂停　·　← → = 上一幕 / 下一幕</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="ctrl">
+    <button class="btn" id="btnPrev" title="上一幕（←）">⏮ 上一幕</button>
+    <button class="btn play" id="btnPlay" title="播放 / 暂停（空格）">⏸ 暂停</button>
+    <button class="btn" id="btnNext" title="下一幕（→）">下一幕 ⏭</button>
+    <span class="sep"></span>
+    <button class="btn ghost" id="btnAuto">自动连播：开</button>
+    <button class="btn ghost" id="btnSpeed">速度 1.0×</button>
+    <button class="btn ghost" id="btnSound">声音：开</button>
+    <span class="flex"></span>
+    <span class="pct" id="pct">0%</span>
+  </div>
+
+  <div class="bar"><i id="barFill"></i></div>
+
+  <div class="chapters" id="chapters"></div>
+
+  <footer class="foot">
+    剧本 / 素材：作者本人　·　呈现：单页互动动画　·　第三张角色拆解图留作后续骨骼动画使用
+  </footer>
+
+</div>
+
+<div class="review" id="review">
+  <div class="rv-card">
+    <div class="rv-h">
+      <span class="rv-tag">复盘</span>
+      <b>你走完了这个故事</b>
+      <button class="rv-close" id="rvClose">✕</button>
+    </div>
+    <div class="rv-body">
+      <div class="rv-sum" id="rvSum"></div>
+      <div class="rv-sec">你的三次选择</div>
+      <div class="rv-list" id="rvList"></div>
+      <div class="rv-sec">七个可以慢慢想的问题</div>
+      <div class="rv-qs">
+        <ol>
+          <li>B 最初想通过这次惊喜获得什么？她的行为和她真正的需要之间是什么关系？</li>
+          <li>A 为什么没有及时回复？哪些是已知事实，哪些只是 B 对他行为的解释？</li>
+          <li>A 认为自己已经尽力处理了工作和关系，为什么 B 仍然感到被忽视？</li>
+          <li>B 的付出是否意味着 A 必须立即回应？如果不是，A 还可以怎样表达自己对她的重视？</li>
+          <li>当一个人无法满足对方的期待时，怎样既表达自己的限制，又不让对方觉得自己不重要？</li>
+          <li>这次冲突中，哪些信息如果能够更早被说出来，可能改变双方的体验？</li>
+          <li>如果两个人都理解了对方，是否意味着他们就必须接受对方的所有行为？理解和边界之间是什么关系？</li>
+        </ol>
+      </div>
+      <div class="rv-note">
+        设计目标：让玩家理解，同一件事可以有不同的体验。练习区分<b>事实</b>、<b>解释</b>、<b>感受</b>和<b>需要</b>，
+        并学习在不否定自己或对方的前提下，表达感受、提出请求和建立边界。
+      </div>
+      <div class="rv-btns">
+        <button class="bigbtn ghost" id="btnReplay">再看一遍</button>
+        <button class="bigbtn" id="btnRestart">换一种选择重走</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="story.js"></script>
+<script src="app.js"></script>
+<script src="godot-bridge.js"></script>
+</body>
+</html>
